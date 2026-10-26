@@ -1,0 +1,102 @@
+/* ==========================================================================
+   CORREÇÃO DE CONTRASTE E TEXTOS - TEMA ROCK/DARK
+   ========================================================================== */
+
+/* Fundo da página cinza escuro / grafite */
+body {
+  background-color: #121212 !important;
+  color: #f8f9fa !important;
+}
+
+/* Cor dos cards, navbar e seções */
+.bg-dark-card, .card-rock {
+  background-color: #1e1e1e !important;
+}
+
+/* CORREÇÃO DO TEXTO MUTED/CINZA (agora bem legível no fundo escuro) */
+.text-muted, 
+small.text-muted, 
+footer .text-muted, 
+footer a.text-muted {
+  color: #adb5bd !important;
+}
+
+/* Links do rodapé ao passar o rato */
+footer a.text-muted:hover {
+  color: #dc3545 !important;
+}
+
+/* CORREÇÃO DOS ÍCONES DAS BOLAS NOS BENEFÍCIOS E CATEGORIAS */
+.rounded-circle.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.rounded-circle.bg-danger i,
+.icon-circle i {
+  color: #ffffff !important; /* Ícones brancos para auto contraste */
+}
+
+/* Ícones do Rodapé */
+footer .bi, 
+footer .fs-4 i {
+  color: #adb5bd !important;
+}
+
+/* Imagens do carrossel */
+.carousel-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+/* Imagens dos discos nos cards */
+.product-img {
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  background-color: #1e1e1e;
+}
+
+/* Imagens dos Banners */
+.banner-img {
+  height: 180px;
+  object-fit: cover;
+  background-color: #1e1e1e;
+}
+
+/* Imagem do Modal */
+.modal-img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Círculos das Categorias */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+}
+
+/* Cursor e efeito Hover nos cartões */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card-hover {
+  transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: #dc3545 !important;
+}
+
+/* Responsividade telemóvel */
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 220px;
+  }
+  .banner-img {
+    height: 120px;
+  }
+}
