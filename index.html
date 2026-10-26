@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loja Online - Bootstrap 5</title>
+  
   <!-- Bootstrap 5 CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Ficheiro CSS Personalizado -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-light">
 
@@ -21,7 +24,7 @@
     <div class="container">
       <a class="navbar-brand fw-bold fs-4 text-primary" href="#">SuaLoja</a>
       
-      <!-- Carrinho e Hamburguer para telas pequenas -->
+      <!-- Carrinho e Hamburguer para telemóveis -->
       <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
         <a href="#" class="btn btn-outline-dark position-relative btn-sm">
           <i class="bi bi-cart3"></i>
@@ -40,7 +43,7 @@
               Categorias
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Eletrônicos</a></li>
+              <li><a class="dropdown-item" href="#">Eletrónicos</a></li>
               <li><a class="dropdown-item" href="#">Roupas</a></li>
               <li><a class="dropdown-item" href="#">Acessórios</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -50,7 +53,7 @@
           <li class="nav-item"><a class="nav-link" href="#">Ofertas</a></li>
         </ul>
 
-        <!-- Campo de busca (Aparece em linha própria no celular) -->
+        <!-- Campo de busca -->
         <form class="d-flex w-100 w-lg-auto my-2 my-lg-0 me-lg-3" role="search">
           <div class="input-group">
             <input class="form-control" type="search" placeholder="Buscar produtos..." aria-label="Buscar">
@@ -67,7 +70,7 @@
     </div>
   </nav>
 
-  <!-- CONTAINER PRINCIPAL DAS SEÇÕES -->
+  <!-- CONTAINER PRINCIPAL -->
   <main class="container my-4">
 
     <!-- 3. CARROSSEL DE BANNERS -->
@@ -80,13 +83,13 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://placehold.co/1200x350/007bff/ffffff?text=Carrossel+Banner+1" class="d-block w-100" alt="Banner 1">
+            <img src="banner1.jpg" class="d-block w-100 carousel-img" alt="Banner 1">
           </div>
           <div class="carousel-item">
-            <img src="https://placehold.co/1200x350/6c757d/ffffff?text=Carrossel+Banner+2" class="d-block w-100" alt="Banner 2">
+            <img src="banner2.jpg" class="d-block w-100 carousel-img" alt="Banner 2">
           </div>
           <div class="carousel-item">
-            <img src="https://placehold.co/1200x350/28a745/ffffff?text=Carrossel+Banner+3" class="d-block w-100" alt="Banner 3">
+            <img src="banner3.jpg" class="d-block w-100 carousel-img" alt="Banner 3">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
@@ -98,54 +101,53 @@
       </div>
     </section>
 
-    <!-- 4. CATEGORIAS (6 colunas desktop: col-lg-2 | 3 colunas celular: col-4) -->
+    <!-- 4. CATEGORIAS (6 colunas desktop / 3 colunas telemóvel) -->
     <section class="mb-5">
       <h3 class="fw-bold mb-3">Categorias</h3>
       <div class="row g-3 text-center">
-        <!-- Item Categoria -->
         <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+          <div class="card h-100 border-0 shadow-sm p-3 card-hover">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2 icon-circle">
               <i class="bi bi-laptop fs-3 text-primary"></i>
             </div>
-            <span class="small fw-semibold">Eletrônicos</span>
+            <span class="small fw-semibold">Eletrónicos</span>
           </div>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+          <div class="card h-100 border-0 shadow-sm p-3 card-hover">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2 icon-circle">
               <i class="bi bi-controller fs-3 text-primary"></i>
             </div>
             <span class="small fw-semibold">Games</span>
           </div>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+          <div class="card h-100 border-0 shadow-sm p-3 card-hover">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2 icon-circle">
               <i class="bi bi-watch fs-3 text-primary"></i>
             </div>
             <span class="small fw-semibold">Acessórios</span>
           </div>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+          <div class="card h-100 border-0 shadow-sm p-3 card-hover">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2 icon-circle">
               <i class="bi bi-bag-check fs-3 text-primary"></i>
             </div>
             <span class="small fw-semibold">Moda</span>
           </div>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+          <div class="card h-100 border-0 shadow-sm p-3 card-hover">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2 icon-circle">
               <i class="bi bi-house fs-3 text-primary"></i>
             </div>
             <span class="small fw-semibold">Casa</span>
           </div>
         </div>
         <div class="col-4 col-lg-2">
-          <div class="card h-100 border-0 shadow-sm p-3">
-            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2" style="width: 60px; height: 60px;">
+          <div class="card h-100 border-0 shadow-sm p-3 card-hover">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-2 icon-circle">
               <i class="bi bi-headphones fs-3 text-primary"></i>
             </div>
             <span class="small fw-semibold">Áudio</span>
@@ -154,7 +156,7 @@
       </div>
     </section>
 
-    <!-- 5. DESTAQUES (4 por linha desktop / 2 tablet / 1 celular: col-12 col-md-6 col-lg-3) -->
+    <!-- 5. DESTAQUES (4 desktop / 2 tablet / 1 telemóvel) -->
     <section class="mb-5">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3 class="fw-bold mb-0">Destaques</h3>
@@ -164,9 +166,9 @@
       <div class="row g-4">
         <!-- Produto 1 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm position-relative">
+          <div class="card h-100 shadow-sm position-relative card-hover">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">Promoção</span>
-            <img src="https://placehold.co/300x200/e9ecef/495057?text=Foto+Produto" class="card-img-top cursor-pointer" alt="Produto 1" data-bs-toggle="modal" data-bs-target="#productModal">
+            <img src="produto1.jpg" class="card-img-top product-img" alt="Headset Gamer Pro" data-bs-toggle="modal" data-bs-target="#productModal">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title fs-6 fw-bold cursor-pointer" data-bs-toggle="modal" data-bs-target="#productModal">Headset Gamer Pro</h5>
               <div class="mt-auto">
@@ -180,8 +182,8 @@
 
         <!-- Produto 2 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
-            <img src="https://placehold.co/300x200/e9ecef/495057?text=Foto+Produto" class="card-img-top cursor-pointer" alt="Produto 2" data-bs-toggle="modal" data-bs-target="#productModal">
+          <div class="card h-100 shadow-sm card-hover">
+            <img src="produto2.jpg" class="card-img-top product-img" alt="Smartwatch Sport" data-bs-toggle="modal" data-bs-target="#productModal">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title fs-6 fw-bold cursor-pointer" data-bs-toggle="modal" data-bs-target="#productModal">Smartwatch Sport</h5>
               <div class="mt-auto">
@@ -194,9 +196,9 @@
 
         <!-- Produto 3 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm position-relative">
+          <div class="card h-100 shadow-sm position-relative card-hover">
             <span class="badge bg-danger position-absolute top-0 start-0 m-2">Promoção</span>
-            <img src="https://placehold.co/300x200/e9ecef/495057?text=Foto+Produto" class="card-img-top cursor-pointer" alt="Produto 3" data-bs-toggle="modal" data-bs-target="#productModal">
+            <img src="produto3.jpg" class="card-img-top product-img" alt="Teclado Mecânico RGB" data-bs-toggle="modal" data-bs-target="#productModal">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title fs-6 fw-bold cursor-pointer" data-bs-toggle="modal" data-bs-target="#productModal">Teclado Mecânico RGB</h5>
               <div class="mt-auto">
@@ -210,10 +212,10 @@
 
         <!-- Produto 4 -->
         <div class="col-12 col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm">
-            <img src="https://placehold.co/300x200/e9ecef/495057?text=Foto+Produto" class="card-img-top cursor-pointer" alt="Produto 4" data-bs-toggle="modal" data-bs-target="#productModal">
+          <div class="card h-100 shadow-sm card-hover">
+            <img src="produto4.jpg" class="card-img-top product-img" alt="Mouse Sem Fio Ergonomico" data-bs-toggle="modal" data-bs-target="#productModal">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title fs-6 fw-bold cursor-pointer" data-bs-toggle="modal" data-bs-target="#productModal">Mouse Sem Fio Ergonomico</h5>
+              <h5 class="card-title fs-6 fw-bold cursor-pointer" data-bs-toggle="modal" data-bs-target="#productModal">Mouse Ergonomico</h5>
               <div class="mt-auto">
                 <div class="fs-5 fw-bold text-dark mb-2">R$ 89,90</div>
                 <button class="btn btn-primary w-100"><i class="bi bi-cart-plus me-1"></i> Adicionar ao carrinho</button>
@@ -229,12 +231,12 @@
       <div class="row g-3">
         <div class="col-12 col-md-6">
           <div class="rounded shadow-sm overflow-hidden">
-            <img src="https://placehold.co/600x180/fd7e14/ffffff?text=BANNER+PROMOCIONAL+A" class="img-fluid w-100" alt="Banner A">
+            <img src="banner-promo-a.jpg" class="img-fluid w-100 banner-img" alt="Banner A">
           </div>
         </div>
         <div class="col-12 col-md-6">
           <div class="rounded shadow-sm overflow-hidden">
-            <img src="https://placehold.co/600x180/6f42c1/ffffff?text=BANNER+PROMOCIONAL+B" class="img-fluid w-100" alt="Banner B">
+            <img src="banner-promo-b.jpg" class="img-fluid w-100 banner-img" alt="Banner B">
           </div>
         </div>
       </div>
@@ -335,7 +337,7 @@
     </div>
   </footer>
 
-  <!-- MODAL DE DETALHES DO PRODUTO -->
+  <!-- MODAL DE PRODUTO -->
   <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -344,8 +346,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
         </div>
         <div class="modal-body">
-          <img src="https://placehold.co/500x300/e9ecef/495057?text=Produto+Expandido" class="img-fluid rounded mb-3" alt="Detalhe do Produto">
-          <h4>Produto Selecionado</h4>
+          <img src="produto1.jpg" class="img-fluid rounded mb-3 modal-img" alt="Detalhe do Produto">
+          <h4>Headset Gamer Pro</h4>
           <p class="text-muted small">Descrição detalhada do produto, com características principais, dimensões, garantia e informações adicionais essenciais.</p>
           <div class="fs-4 fw-bold text-success mb-3">R$ 199,00</div>
         </div>
@@ -357,7 +359,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap 5 JS Bundle CDN (Necessário para Modal, Carousel, Dropdown e Collapse) -->
+  <!-- Bootstrap JS Bundle CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
